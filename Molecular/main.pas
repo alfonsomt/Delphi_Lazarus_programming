@@ -34,7 +34,7 @@ type TMoleculaclass = class(TObject)
         FName: string;
       public
         constructor create;
-        destructor destroy;
+        destructor destroy; override;
         procedure ReadFASTAFile(filename: string);
         property Secuencia: string read FSecuencia write FSecuencia;
         property Name: string read FName write FName;
@@ -54,14 +54,14 @@ implementation
 { TForm1 }
 constructor TMoleculaclass.create;
 begin
+  inherited Create;
   FName := '';
   FSecuencia := '';
-
 end;
 
 destructor TMoleculaclass.destroy;
 begin
-
+   inherited Destroy;
 end;
 
 procedure TMoleculaclass.ReadFASTAFile(filename: string);
