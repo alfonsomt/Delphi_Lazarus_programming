@@ -1,0 +1,63 @@
+object Form1: TForm1
+  Left = 253
+  Height = 476
+  Top = 104
+  Width = 731
+  Caption = 'Form1'
+  ClientHeight = 476
+  ClientWidth = 731
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '2.2.2.0'
+  object Label1: TLabel
+    Left = 10
+    Height = 16
+    Top = 32
+    Width = 49
+    Caption = 'Archivo:'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 72
+    Height = 22
+    Top = 26
+    Width = 376
+    TabOrder = 0
+    Text = 'ninguno'
+  end
+  object SpeedButton1: TSpeedButton
+    Left = 464
+    Height = 22
+    Top = 26
+    Width = 23
+    Caption = '...'
+    OnClick = SpeedButton1Click
+  end
+  object Memo1: TMemo
+    Left = 24
+    Height = 322
+    Top = 110
+    Width = 680
+    TabOrder = 1
+  end
+  object Label2: TLabel
+    Left = 32
+    Height = 16
+    Top = 88
+    Width = 42
+    Caption = 'Título: '
+    ParentColor = False
+  end
+  object Edit2: TEdit
+    Left = 80
+    Height = 22
+    Top = 80
+    Width = 368
+    Enabled = False
+    TabOrder = 2
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 528
+    Top = 24
+  end
+end
