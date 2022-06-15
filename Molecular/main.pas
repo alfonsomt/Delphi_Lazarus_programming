@@ -5,7 +5,8 @@ unit main;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Buttons;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Buttons,
+  protclass;
 
 type
 
@@ -28,17 +29,6 @@ type
 
   end;
 
-type TMoleculaclass = class(TObject)
-      protected
-        FSecuencia: string;
-        FName: string;
-      public
-        constructor create;
-        destructor destroy; override;
-        procedure ReadFASTAFile(filename: string);
-        property Secuencia: string read FSecuencia write FSecuencia;
-        property Name: string read FName write FName;
-      end;
 
 
 
@@ -52,32 +42,6 @@ implementation
 {$R *.lfm}
 
 { TForm1 }
-constructor TMoleculaclass.create;
-begin
-  inherited Create;
-  FName := '';
-  FSecuencia := '';
-end;
-
-destructor TMoleculaclass.destroy;
-begin
-   inherited Destroy;
-end;
-
-procedure TMoleculaclass.ReadFASTAFile(filename: string);
-var Arch: TextFile;
-    linea: string;
-begin
-  AssignFile(Arch, filename);
-  Reset(Arch);
-  Readln(Arch, FName);
-  while not eof(Arch) do begin
-    Readln(Arch, linea);
-    Secuencia := Secuencia + linea;
-  end;
-  CloseFile(Arch);
-end;
-
 procedure TForm1.SpeedButton1Click(Sender: TObject);
 begin
   if OpenDialog1.Execute then begin
