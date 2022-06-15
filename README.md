@@ -6,4 +6,4 @@ Se anexan algunos proyectos en Lazarus/Free Pascal que ilustran algunas aplicaci
 
 Ejemplos:  
 
-Molecular:  Un formulario que lee la secuencia de una proteína en formato FASTA y  muestra su nombre y la secuencia en un Memo.  
+**Molecular:**  Un formulario que lee la secuencia de una proteína en formato FASTA y  muestra su nombre y la secuencia en un Memo.  
