@@ -13,3 +13,5 @@ Ejemplos:
 **Molecular:**  Un formulario que lee la secuencia de una proteína en formato FASTA y  muestra su nombre y la secuencia en un Memo.  
 
 **Ejemplo Consola:** Es un ejemplo de aplicación de consola para ilustrar el uso de ciclos, condicionales, subrutinas y el empleo de unidades.
+
+**Lib:** Incluye la unidad con las rutinas para el ejemplo Consola. Posiblemente se coloquen aquí otras unidades comunes para otros proyectos.
